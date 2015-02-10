@@ -19,7 +19,7 @@
     <![endif]-->
 </head>
 <body>
-	<nav class="cf nav-home">
+	<nav class="cf">
 		<div class="nav-default">
 			<ul>
 				<li class="nav-logo">
@@ -74,27 +74,67 @@
 		</div>
 	</nav>
 
-	<section class="home-featured">
-		<div class="home-featured-slider">
-			<div class="featured-bg collection-2015">
-				<div class="featured-inner">
-					<a href="">
-						<img src="img/dummy-home-ad-logo.png" alt="">
-						<p class="featured-text">CONOCÉ LA NUEVA<br><strong>COLECCIÓN VERANO 2015</strong></p>
-					</a>
+	<section class="article container cf">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="article-slider">
+					<div><img src="img/item-dummy-1.jpg" alt=""></div>
+					<div><img src="img/item-dummy-2.jpg" alt=""></div>
+					<div><img src="img/item-dummy-3.jpg" alt=""></div>
+					<div><img src="img/item-dummy-4.jpg" alt=""></div>
 				</div>
 			</div>
-			<div class="featured-bg gradient">
-				<div class="featured-inner">
-					<a href="">
-						<p class="featured-text">ESPACIO PARA PUBLICIDAD / PRESENTACIONES</p>
-					</a>
+			<div class="col-sm-6 article-info">
+				<h2>Camisa Dammar</h2>
+				<p class="price">$ 319,99</p>
+				
+				<div class="row divider cf">
+					<div class="col-xs-6 col-md-12">
+						<p class="label">Colores</p>
+						<div class="color-select red2 selected">
+							<span class="icon_check"></span>
+							<div></div>
+						</div>
+						<div class="color-select blue1">
+							<span class="icon_check"></span>
+							<div></div>
+						</div>
+						<div class="color-select black">
+							<span class="icon_check"></span>
+							<div></div>
+						</div>
+					</div>
+
+					<div class="divider-large col-xs-6 col-md-12">
+						<p class="label">Talles</p>
+						<div class="size-select selected">
+							S
+						</div>
+						<div class="size-select">
+							M
+						</div>
+						<div class="size-select">
+							L
+						</div>
+					</div>
+				</div>
+				
+				<div class="divider cf">
+					<button class="btn btn-addon article-addtocart">
+						<span>
+							<i class="icon_cart_alt"></i>
+						</span>
+						<p>Agregar al carrito</p>
+					</button>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="items-container cf">
+		<div class="container">
+			<h2>Tambien puede interesarte...</h2>
+		</div>
 
 		<a class="item item-default" href="articulo.html">
 			<img src="img/item-dummy-1.jpg" alt="">
@@ -145,62 +185,6 @@
 					<div>
 						<p class="item-title">
 							<span>Remera Estaño</span>
-						</p>
-						<p class="item-price">$179,99</p>
-					</div>
-				</div>
-			</div>
-		</a>
-
-		<a class="item item-default" href="articulo.html">
-			<img src="img/item-dummy-1.jpg" alt="">
-			<div class="item-overlay">
-				<div class="overlay-inner">
-					<div>
-						<p class="item-title">
-							<span>Camisa Dammar</span>
-						</p>
-						<p class="item-price">$419,99</p>
-					</div>
-				</div>
-			</div>
-		</a>
-
-		<a class="item item-default" href="articulo.html">
-			<img src="img/item-dummy-4.jpg" alt="">
-			<div class="item-overlay">
-				<div class="overlay-inner">
-					<div>
-						<p class="item-title">
-							<span>Remera Estaño</span>
-						</p>
-						<p class="item-price">$179,99</p>
-					</div>
-				</div>
-			</div>
-		</a>
-
-		<a class="item item-default" href="articulo.html">
-			<img src="img/item-dummy-3.jpg" alt="">
-			<div class="item-overlay">
-				<div class="overlay-inner">
-					<div>
-						<p class="item-title">
-							<span>Camisa Mito</span>
-						</p>
-						<p class="item-price">$419,99</p>
-					</div>
-				</div>
-			</div>
-		</a>
-
-		<a class="item item-default" href="articulo.html">
-			<img src="img/item-dummy-2.jpg" alt="">
-			<div class="item-overlay">
-				<div class="overlay-inner">
-					<div>
-						<p class="item-title">
-							<span>Remera Escandio</span>
 						</p>
 						<p class="item-price">$179,99</p>
 					</div>
@@ -209,20 +193,43 @@
 		</a>
 
 	</section>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js"></script>
 
 	<script>
-		$('.home-featured-slider').slick({
+		$('.article-slider').slick({
 			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			arrows: false,
-			autoplay: true,
-			easing: 'swing',
-			speed: 800
+			arrows: true,
+			prevArrow: '<span class="article-slider-prev arrow_carrot-left_alt"></span>',
+			nextArrow: '<span class="article-slider-next arrow_carrot-right_alt"></span>',
+			dots: true
+		});
+	</script>
+	
+
+	<!-- DUMMY STUFF -->
+	<script>
+		$('.color-select').click(function() {
+			$('.color-select').removeClass('selected');
+			$(this).addClass('selected');
+		});
+
+		$('.size-select').click(function() {
+			$('.size-select').removeClass('selected');
+			$(this).addClass('selected');
+		});
+
+		$('.article-addtocart').click(function() {
+			$(this).html('<span><i class="icon_check"></i></span><p>Agregado al carrito</p>').addClass('added');
+			$('.nav-cart-helper').addClass('showing');
+		});
+
+		$('.nav-cart').mouseover(function() {
+		    $('.nav-cart-helper').removeClass('showing');
 		});
 	</script>
 </body>

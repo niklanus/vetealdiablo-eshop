@@ -1,0 +1,1 @@
+$(".nav-button").click(function(){$(".nav-mobile-items").slideToggle("500"),$(this).html('<span class="icon_menu"></span>Ver menú'==$(this).html()?'<span class="icon_close"></span>Cerrar menú':'<span class="icon_menu"></span>Ver menú')});
