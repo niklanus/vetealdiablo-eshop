@@ -19,7 +19,7 @@
     <![endif]-->
 </head>
 <body>
-	<nav class="cf nav-home">
+	<nav class="cf">
 		<div class="nav-default">
 			<ul>
 				<li class="nav-logo">
@@ -73,26 +73,16 @@
 			</ul>
 		</div>
 	</nav>
-
-	<section class="home-featured">
-		<div class="home-featured-slider">
-			<div class="featured-bg collection-2015">
-				<div class="featured-inner">
-					<a href="">
-						<img src="img/dummy-home-ad-logo.png" alt="">
-						<p class="featured-text">CONOCÉ LA NUEVA<br><strong>COLECCIÓN VERANO 2015</strong></p>
-					</a>
-				</div>
-			</div>
-			<div class="featured-bg gradient">
-				<div class="featured-inner">
-					<a href="">
-						<p class="featured-text">ESPACIO PARA PUBLICIDAD / PRESENTACIONES</p>
-					</a>
-				</div>
-			</div>
+	
+	<div class="article-section container">
+		<h2>Camisas</h2>
+		
+		<div class="items-sorts">
+			<p>Ordernar por</p>
+			<button class="btn" data-sort-value="name">Nombre</button>
+			<button class="btn" data-sort-value="price">Precio</button>
 		</div>
-	</section>
+	</div>
 
 	<section class="items-container cf">
 
@@ -213,16 +203,35 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<script src="js/isotope.min.js"></script>
 
 	<script>
-		$('.home-featured-slider').slick({
-			infinite: true,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			autoplay: true,
-			easing: 'swing',
-			speed: 800
+		$( function() {
+		  // init Isotope
+		  var $container = $('.items-container').isotope({
+		  	layoutMode: 'fitRows',
+		    itemSelector: '.item',
+		    getSortData: {
+		      name: '.item-title span',
+		      price: '.item-price'
+		    }
+		  });
+
+		  // bind sort button click
+		  $('.items-sorts').on( 'click', 'button', function() {
+		    var sortValue = $(this).attr('data-sort-value');
+		    $container.isotope({ sortBy: sortValue });
+		  });
+
+		  // change is-checked class on buttons
+		  $('.button-group').each( function( i, buttonGroup ) {
+		    var $buttonGroup = $( buttonGroup );
+		    $buttonGroup.on( 'click', 'button', function() {
+		      $buttonGroup.find('.active').removeClass('active');
+		      $( this ).addClass('active');
+		    });
+		  });
+		  
 		});
 	</script>
 </body>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html lang="en-us" class="ie8"> <![endif]-->
+<!--[if lt IE 9]><!--> <html lang="es" class="ie9plus"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Vete al Diablo - eShop</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Roboto:500,400italic,100,300,700,500italic,300italic,400' rel='stylesheet' type='text/css'>
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<nav class="cf">
+		<div class="nav-default">
+			<ul>
+				<li class="nav-logo">
+					<a href="index.html"><div></div></a>
+				</li>
+				<li><a href="seccion-articulos.html">Pantalones</a><span></span></li>
+				<li><a href="seccion-articulos.html">Remeras</a><span></span></li>
+				<li><a href="seccion-articulos.html">Camisas</a><span></span></li>
+				<li><a href="seccion-articulos.html">Buzos</a><span></span></li>
+				<li><a href="seccion-articulos.html">Bolsos</a><span></span></li>
+				<li><a href="seccion-articulos.html">Accesorios</a><span></span></li>
+			</ul>
+			<div class="nav-cart-container">
+				<a href="cart.html" class="nav-cart">
+					<span class="icon_cart_alt"></span>
+				</a>
+				<div class="nav-cart-helper">
+					<div class="dialog">
+						<span class="triangle"></span>
+						Ver tu carrito
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="nav-mobile">
+			<div class="cf">
+				<div class="nav-logo">
+					<a href="index.html"><div></div></a>
+				</div>
+				<button class="nav-button"><span class="icon_menu"></span>Ver menú</button>
+				<div class="nav-cart-container">
+					<a href="cart.html" class="nav-cart">
+						<span class="icon_cart_alt"></span>
+					</a>
+					<div class="nav-cart-helper">
+						<div class="dialog">
+							<span class="triangle"></span>
+							Ver tu carrito
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul class="nav-mobile-items">
+				<li><a href="">Pantalones</a><span></span></li>
+				<li><a href="">Remeras</a><span></span></li>
+				<li><a href="">Camisas</a><span></span></li>
+				<li><a href="">Buzos</a><span></span></li>
+				<li><a href="">Bolsos</a><span></span></li>
+				<li><a href="">Accesorios</a><span></span></li>
+			</ul>
+		</div>
+	</nav>
+
+	<section class="checkout-1 container">
+		<div class="row">
+
+			<div class="col-sm-4">
+				<h2>Ingresá con tu cuenta</h2>
+					
+				<form action="" class="checkout-login">
+					<div class="login-error">Por favor revisa los datos ingresados.</div>
+
+					<label for="login-1" class="label-default">E-mail</label>
+					<input type="text" id="login-1" class="input-default" autofocus>
+					<label for="login-2" class="label-default">Contraseña</label>
+					<input type="password" id="login-2" class="input-default">
+					
+					<!--
+					CAMBIAR POR DUMMY
+					<div class="centered">
+						<input type="submit" value="Ingresar" class="btn transparent">
+					</div> -->
+					<div class="centered">
+						<a class="btn transparent" id="login-error-dummy">Ingresar</a>
+					</div>
+				</form>				
+				
+				<form action="" class="checkout-register">
+					<h2>Registrate ahora</h2>
+
+					<p>Si todavía no tenés tu cuenta, podés registrarte de forma gratuita para finalizar rápidamente tus futuras compras y recibir descuentos y promociones!</p>
+
+					<label for="registration-1" class="label-default">Nombre completo</label>
+					<input type="text" id="registration-1" class="input-default">
+					<label for="registration-2" class="label-default">E-mail</label>
+					<input type="text" id="registration-2" class="input-default">
+					<label for="registration-3" class="label-default">Contraseña</label>
+					<input type="password" id="registration-3" class="input-default">
+					<label for="registration-4" class="label-default">Repetir contraseña</label>
+					<input type="password" id="registration-4" class="input-default">
+					<label for="registration-5" class="label-default">Dirección de calle</label>
+					<input type="password" id="registration-5" class="input-default" placeholder="Ej.: Av. Corrientes 1234, 13 'B'">
+					<label for="registration-6" class="label-default">Código postal</label>
+					<input type="password" id="registration-6" class="input-default">
+					<label for="registration-7" class="label-default">Ciudad/Provincia</label>
+					<input type="password" id="registration-7" class="input-default" placeholder="Ej.: CABA">
+					
+					<div class="centered">
+						<input type="submit" value="Finalizar registro" class="btn block">
+					</div>
+				</form>
+			</div>
+
+			<div class="col-sm-8">
+				<form action="" class="checkout-guest">
+					<h2>Comprá como invitado</h2>
+
+					<p>Completá los siguentes datos para terminar tu compra sin necesidad de registarte.</p>
+					
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="guest-1" class="label-default">Nombre completo</label>
+							<input type="text" id="guest-1" class="input-default">
+						</div>
+						<div class="col-sm-6">
+							<label for="guest-2" class="label-default">E-mail</label>
+							<input type="text" id="guest-2" class="input-default">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="guest-3" class="label-default">Dirección de calle</label>
+							<input type="text" id="guest-3" class="input-default" placeholder="Ej.: Av. Corrientes 1234, 13 'B'">
+						</div>
+						<div class="col-sm-6">
+							<label for="guest-4" class="label-default">Código postal</label>
+							<input type="text" id="guest-4" class="input-default">
+						</div>
+					</div>
+					<div class="row cf">
+						<div class="col-sm-6">
+							<label for="guest-5" class="label-default">Ciudad/Provincia</label>
+							<input type="text" id="guest-5" class="input-default" placeholder="Ej.: CABA">
+						</div>
+					</div>
+					
+					<!--
+					CAMBIAR POR DUMMY
+					<div class="centered">
+						<input type="submit" value="Continuar compra" class="btn block" href="checkout-2.html">
+					</div>
+					-->
+					<div class="centered">
+						<a class="btn block" href="checkout-2.html">Continuar compra</a>
+					</div>
+				</form>
+			</div>
+		
+		</div>
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+
+	<!-- DUMMY STUFF -->
+
+	<script>
+		$('#login-error-dummy').click(function() {
+			$('.login-error').slideDown('500');
+		});
+	</script>
+</body>
+</html>

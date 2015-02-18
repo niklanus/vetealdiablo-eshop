@@ -1,0 +1,97 @@
+.btn 
+	display: inline-block
+	height: 44px
+	color: black
+	background: white
+	border: 1px solid black
+	padding: 0
+	outline: 0
+	cursor: pointer
+	text-transform: uppercase
+	text-decoration: none
+	font-size: 1.1em
+	line-height: 44px
+	padding: 0 18px
+	box-sizing: border-box
+	@include hover
+
+	&:hover, &:focus
+		background-color: black
+		color: white
+
+.btn.active
+	background-color: black
+	color: white
+
+.btn.block
+	display: block
+	width: 100%
+
+.btn.transparent
+	border: 0
+	color: white
+	background-color: black
+	background-color: rgba(0,0,0,0.30)
+
+	&:hover, &:focus
+		background-color: rgba(0,0,0,0.7)
+
+.btn-addon
+	text-transform: none
+	font-size: 1em
+	line-height: auto
+	padding: 0
+
+	p
+		color: black
+		display: inline-block
+		margin: 0
+		text-transform: uppercase
+		font-size: 1.1em
+		line-height: 44px
+		padding: 0 18px
+		@include hover
+
+	span, p
+		display: inline-block
+	
+	span
+		width: 44px
+		height: 43px
+		background-color: black
+		text-align: center
+		position: relative
+		top: -1px
+
+		i
+			font-size: 1.1em
+			color: white
+			position: relative
+
+	&:hover
+		background-color: lighten(black,25)
+
+		p
+			color: white
+
+input, select, textarea
+	box-sizing: border-box
+
+.label-default
+	display: block
+	text-transform: uppercase
+	font-size: 0.9em
+	margin-bottom: 4px
+
+.input-default
+	width: 100%
+	border: 1px solid lighten(black,80)
+	padding: 7px 10px
+	outline: 0
+	margin-bottom: 12px
+	font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif
+	font-weight: 300
+	@include hover
+
+	&:focus
+		border-color: black
