@@ -33,13 +33,24 @@
 				<li><a href="seccion-articulos.html">Accesorios</a><span></span></li>
 			</ul>
 			<div class="nav-cart-container">
-				<a href="cart.html" class="nav-cart">
+				<a href="cart.html" class="nav-link-btn">
 					<span class="icon_cart_alt"></span>
 				</a>
 				<div class="nav-cart-helper">
 					<div class="dialog">
 						<span class="triangle"></span>
 						Ver tu carrito
+					</div>
+				</div>
+			</div>
+			<div class="nav-login-container">
+				<a href="cart.html" class="nav-link-btn">
+					<span class="icon_profile"></span>
+				</a>
+				<div class="nav-login-helper">
+					<div class="dialog">
+						<span class="triangle"></span>
+						Mirá tu perfil
 					</div>
 				</div>
 			</div>
@@ -52,13 +63,24 @@
 				</div>
 				<button class="nav-button"><span class="icon_menu"></span>Ver menú</button>
 				<div class="nav-cart-container">
-					<a href="cart.html" class="nav-cart">
+					<a href="cart.html" class="nav-link-btn">
 						<span class="icon_cart_alt"></span>
 					</a>
 					<div class="nav-cart-helper">
 						<div class="dialog">
 							<span class="triangle"></span>
 							Ver tu carrito
+						</div>
+					</div>
+				</div>
+				<div class="nav-login-container">
+					<a href="cart.html" class="nav-link-btn">
+						<span class="icon_profile"></span>
+					</a>
+					<div class="nav-login-helper">
+						<div class="dialog">
+							<span class="triangle"></span>
+							Mirá tu perfil
 						</div>
 					</div>
 				</div>
@@ -207,23 +229,12 @@
 
 	<!-- DUMMY STUFF -->
 	<script>
-		$('.color-select').click(function() {
-			$('.color-select').removeClass('selected');
-			$(this).addClass('selected');
-		});
+		$(document).ready(function(){
+			$('.nav-login-helper').addClass('showing');
 
-		$('.size-select').click(function() {
-			$('.size-select').removeClass('selected');
-			$(this).addClass('selected');
-		});
-
-		$('.article-addtocart').click(function() {
-			$(this).html('<span><i class="icon_check"></i></span><p>Agregado al carrito</p>').addClass('added');
-			$('.nav-cart-helper').addClass('showing');
-		});
-
-		$('.nav-cart').mouseover(function() {
-		    $('.nav-cart-helper').removeClass('showing');
+			$('.nav-login-container').mouseover(function() {
+			    $('.nav-login-helper').removeClass('showing');
+			});
 		});
 	</script>
 </body>
